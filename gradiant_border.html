@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        :root {
+            --font-family: 'Karla', sans-serif;
+            --body-bg: #1E1F25;
+            --btn-bg: #000;
+            --btn-color: #cbcbcb;
+            --btn-color-hover: #fff;
+            --grad-color1: #eeaf61;
+            --grad-color2: #fb9062;
+            --grad-color3: #ee5d6c;
+            --grad-color4: #ce4993;
+            --grad-color5: #6a0d33;
+            --btn-border-width:160px;
+            --btn-border-height:60px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         html{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-family: var(--font-family);
+        }
+        body{
+            background-color: var(--body-bg);
+        }
+        .button_border{
+            width:var(--btn-border-width);
+            height: var(--btn-border-height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(150deg,var(--grad-color1),var(--grad-color2),var(--grad-color3),var(--grad-color4),var(--grad-color5));
+        }
+        .button{
+            width: calc(var(--btn-border-width) - 4px);
+            height:calc(var(--btn-border-height) - 4px) ;
+            outline: none;
+            border:none;
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+        }
+        .button:hover{
+            color: var(--btn-color-hover);
+        }
+        .button_border:hover{
+            transform: scale(1.05);
+            background-image: linear-gradient(-150deg,var(--grad-color1),var(--grad-color2),var(--grad-color3),var(--grad-color4),var(--grad-color5));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button_border">
+            <button type="button" class="button">
+                start Coding!..
+            </button>
+        </div>
+    </div>
+</body>
+</html>
