@@ -6,9 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style type="text/css">
+        
         .container{
             max-width: 250px;
-            width: 180px;
+            width: 150px;
             height: 80px;
             padding: 15px;
             display:flex;
@@ -16,7 +17,6 @@
             align-items: center;
         }
         .circle{
-            display: inline-block;
            height: clamp(20px,30px,40px);
            width: clamp(20px,30px,40px);
            background-color: rgb(116, 116, 116);
@@ -39,7 +39,6 @@
             display: inline-block;
             max-height:60px;
             height: 50px;
-            background-color: rgb(116, 116, 116);
             width: 20px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
@@ -48,12 +47,43 @@
         @keyframes loading_bar {
             0%,100%{
                 height: 0;
-                background-color: rgb(51, 50, 50);
+                background-color: rgb(214, 55, 55);
             }
             50%{
                 height: 50px;
                 background-color: rgb(156, 151, 151);
             }
+        }
+        .box{
+            height: clamp(20px,30px,40px);
+            width: clamp(20px,30px,40px);
+            background-color: rgb(calc(75 * var(--i)), calc(9 * var(--i)),calc(var(--i) * 10));
+            animation: box_loader 1s ease  infinite;
+        }
+        @keyframes box_loader {
+            from{
+                transform: rotateZ(-45deg);
+            }
+            to{
+                transform: rotateZ(45deg);
+            }
+            /* 0%,20%{
+                transform: rotateZ(0deg)
+            }
+            25%,45%{
+                transform: rotateZ(45deg);
+                
+            }
+            50%,70%{
+                transform: rotateZ(90deg);
+               
+            }
+            75%,95%{
+                transform: rotateZ(135deg);
+            }
+            100%{
+                transform: rotateZ(180deg);
+            } */
         }
     </style>
 </head>
@@ -62,6 +92,11 @@
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
+    </div>
+    <div class="container">
+        <div class="box" style="--i:1"></div>
+        <div class="box" style="--i:2"></div>
+        <div class="box" style="--i:3"></div>
     </div>
     <div class=" bar_container container">
         <div class="bar" style="--i:1"></div>
