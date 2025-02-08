@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" />
+    <!-- Correct Google Icons Link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        :root{
+            --font-main:'Noto Sans',sans-serif;
+            --bg-main:#131417;
+            --bg-card:#1e1f26;
+            --bg-stats:#131417;
+            --username:#b7bbc8;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 
+                'FILL' 0, 
+                'wght' 400, 
+                'GRAD' 0, 
+                'opsz' 24;
+        }
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+       
+        .card{
+             max-width: 300px;
+             max-height: fit-content;
+             background-color: var(--bg-main);
+             padding: 20px 20px 5px;
+             border-radius: 5px;
+        }
+        .card-thumbnail{
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 10px;
+        }
+        .card-body{
+            width: 100%;
+            font-family: var(--font-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+        .card-avatar{
+            border-radius: 15px;
+            margin: 5px;
+        }
+        .card-avatar img{
+            width: 50px;
+            height: 50px;
+            object-fit:cover;
+            border-radius: 40%;
+        }
+        .card-details{
+            text-align: start;
+        }
+        .card-details>h3{
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+        }
+        .card-details>p{
+            color: var(--username);
+        }
+        ul{
+            display: none;
+            color: rgb(255, 255, 255);
+            transition: all 0.5s;
+             opacity: 0;
+        }
+        li{
+            display: inline-block;
+            text-align: center;
+            margin-left: 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .card-body:hover + ul{
+           display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- -->
+    <div class="card">
+        <div class="card-thumbnail">
+            <img src="./images/ganapathi.jpg" alt="">
+        </div>
+        <div class="card-body">
+            <div class="card-avatar">
+                <img src="./images/ganapathi.jpg" alt="">
+            </div>
+        <div class="card-details">
+            <h3>Abstract Gradient Project</h3>
+            <p>scrimpsbee McScrimslee</p>
+        </div>
+    </div>
+    <ul class="card-stats">
+        <li><span class="material-symbols-outlined">favorite</span> 8</li>
+        <li><span class="material-symbols-outlined">comment</span> 32</li>
+    </ul>
+</div>
+
+</body>
+</html>
